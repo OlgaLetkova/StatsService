@@ -26,28 +26,32 @@ class StatsServiceTest {
     @Test
     void findMonthWithMaxSale() {
         StatsService service = new StatsService();
-        int monthWithMaxSale = service.findMonthWithMaxSale(purchases);
-        System.out.println(monthWithMaxSale);
+        int expected = 8;
+        int actual = service.findMonthWithMaxSale(purchases);
+        assertEquals(expected, actual);
     }
 
     @Test
     void findMonthWithMinSale() {
         StatsService service = new StatsService();
-        int monthWithMinSale = service.findMonthWithMinSale(purchases);
-        System.out.println(monthWithMinSale);
+        int expected = 9;
+        int actual = service.findMonthWithMinSale(purchases);
+        assertEquals(expected, actual);
     }
 
     @Test
     void findQuantityMonthWithSaleLowMiddle() {
         StatsService service = new StatsService();
-        int quantityMonth = service.findQuantityMonthWithSaleLowMiddle(purchases);
-        System.out.println(quantityMonth);
+        int expected = 5;
+        int actual = service.findQuantityMonthWithSaleLowMiddle(purchases);
+        assertEquals(expected, actual);
     }
 
     @Test
     void findQuantityMonthWithSaleHighMiddle() {
         StatsService service = new StatsService();
-        int quantityMonth = service.findQuantityMonthWithSaleHighMiddle(purchases);
-        System.out.println(quantityMonth);
+        int expected = 5;
+        int actual = service.findQuantityMonthWithSaleHighMiddle(purchases);
+        assertEquals(expected, actual);
     }
 }
